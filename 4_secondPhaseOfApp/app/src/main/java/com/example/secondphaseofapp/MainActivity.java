@@ -32,6 +32,12 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         }
+        else if (id == R.id.places_facts_menu_item) {
+            Intent intent = new Intent(this, LocationFactsActivity.class);
+            if (intent.resolveActivity(getPackageManager()) != null) {
+                startActivity(intent);
+            }
+        }
         return super.onOptionsItemSelected(item);
     }
 }

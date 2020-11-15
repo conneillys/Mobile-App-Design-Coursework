@@ -4,11 +4,15 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 
 import android.Manifest;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Location;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -93,6 +97,31 @@ public class WeatherActivity extends AppCompatActivity {
     }
 
     @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu_weather, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        if (id == R.id.main_menu_item) {
+            Intent intent = new Intent(this, MainActivity.class);
+            if (intent.resolveActivity(getPackageManager()) != null) {
+                startActivity(intent);
+            }
+        }
+        else if (id == R.id.places_facts_menu_item) {
+            Intent intent = new Intent(this, LocationFactsActivity.class);
+            if (intent.resolveActivity(getPackageManager()) != null) {
+                startActivity(intent);
+            }
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+    @Override
     public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
         FusedLocationProviderClient locClient = LocationServices.getFusedLocationProviderClient(this);
         locClient.getLastLocation().addOnSuccessListener(this, new OnSuccessListener<Location>() {
@@ -126,7 +155,6 @@ public class WeatherActivity extends AppCompatActivity {
         @Override
         protected void onPostExecute(String[] data) {
             if (data != null) {
-
                 int i = Integer.valueOf(data[3]);
                 int code = Integer.valueOf(data[0]);
                 String high = data[1];

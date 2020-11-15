@@ -22,6 +22,9 @@
     <string name="resume_page">Resume</string>
     <string name="bonus_page">Bonus Facts</string>
 
+    <!-- Other resource strings -->
+    <string name="click_more">More…</string>
+
     <!-- Weather Condition Names, sourced from Udacity Sunshine Project -->
     <!-- Weather Conditions (From OpenWeatherMap) -->
     <string name="condition_2xx">Storm</string>

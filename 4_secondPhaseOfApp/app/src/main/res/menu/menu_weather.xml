@@ -7,25 +7,25 @@
         android:id="@+id/main_menu_item"
         android:orderInCategory="1"
         android:title="@string/home_page"
-        app:showAsAction="ifRoom"/>
+        app:showAsAction="never"/>
     <item
         android:id="@+id/places_facts_menu_item"
         android:orderInCategory="2"
         android:title="@string/place_facts_page"
-        app:showAsAction="ifRoom"/>
+        app:showAsAction="never"/>
     <item
         android:id="@+id/portfolio_menu_item"
         android:orderInCategory="3"
         android:title="@string/investment_page"
-        app:showAsAction="ifRoom"/>
+        app:showAsAction="never"/>
     <item
         android:id="@+id/resume_menu_item"
         android:orderInCategory="4"
         android:title="@string/resume_page"
-        app:showAsAction="ifRoom"/>
+        app:showAsAction="never"/>
     <item
         android:id="@+id/bonus_facts_menu_item"
         android:orderInCategory="5"
         android:title="@string/bonus_page"
-        app:showAsAction="ifRoom"/>
+        app:showAsAction="never"/>
 </menu>
