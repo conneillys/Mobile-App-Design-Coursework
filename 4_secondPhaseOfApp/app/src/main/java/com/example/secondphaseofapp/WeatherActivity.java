@@ -118,6 +118,12 @@ public class WeatherActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         }
+        else if (id == R.id.portfolio_menu_item) {
+            Intent intent = new Intent(this, PortfolioActivity.class);
+            if (intent.resolveActivity(getPackageManager()) != null) {
+                startActivity(intent);
+            }
+        }
         return super.onOptionsItemSelected(item);
     }
 

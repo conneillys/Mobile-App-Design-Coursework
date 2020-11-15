@@ -22,6 +22,17 @@
     <string name="resume_page">Resume</string>
     <string name="bonus_page">Bonus Facts</string>
 
+    <!-- Investment Portfolio Labels -->
+    <string name="my_investments_label">My Portfolio</string>
+    <string name="parents_investments_label">Parents\' Portfolio</string>
+    <string name="asset_label">Asset</string>
+    <string name="money_amt_label">Monetary Value</string>
+    <string name="proportion_label">Proportion</string>
+    <string name="stocks_label">Stocks</string>
+    <string name="bonds_label">Bonds</string>
+    <string name="property_label">Property</string>
+    <string name="cash_label">Cash</string>
+
     <!-- Other resource strings -->
     <string name="click_more">More…</string>
 

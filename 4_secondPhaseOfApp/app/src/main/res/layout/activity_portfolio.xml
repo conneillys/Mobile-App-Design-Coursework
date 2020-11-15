@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PortfolioActivity">
+
+    <!-- My Investments -->
+
+    <TextView
+        android:id="@+id/my_investments_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/my_investments_label"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Table Headers -->
+
+    <TextView
+        android:id="@+id/my_investments_asset_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/asset_label"
+        app:layout_constraintBottom_toTopOf="@+id/my_investments_stocks_label"
+        app:layout_constraintEnd_toStartOf="@+id/guideline8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/my_investments_label" />
+
+    <TextView
+        android:id="@+id/my_investments_money_amt_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/money_amt_label"
+        app:layout_constraintBottom_toTopOf="@+id/my_investments_stocks_money"
+        app:layout_constraintEnd_toStartOf="@+id/guideline9"
+        app:layout_constraintStart_toStartOf="@+id/guideline8"
+        app:layout_constraintTop_toBottomOf="@+id/my_investments_label" />
+
+    <!-- Stocks Info -->
+
+    <TextView
+        android:id="@+id/my_investments_proportion_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/proportion_label"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline9"
+        app:layout_constraintTop_toTopOf="@+id/my_investments_money_amt_label" />
+
+    <TextView
+        android:id="@+id/my_investments_stocks_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/stocks_label"
+        app:layout_constraintBottom_toTopOf="@+id/my_investments_bonds_label"
+        app:layout_constraintEnd_toStartOf="@+id/guideline8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/my_investments_asset_label" />
+
+    <TextView
+        android:id="@+id/my_investments_stocks_money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="stocks money test"
+        app:layout_constraintBottom_toTopOf="@+id/my_investments_bonds_money"
+        app:layout_constraintEnd_toStartOf="@+id/guideline9"
+        app:layout_constraintStart_toStartOf="@+id/guideline8"
+        app:layout_constraintTop_toBottomOf="@+id/my_investments_money_amt_label" />
+
+    <!-- Bonds Info -->
+
+    <TextView
+        android:id="@+id/my_investments_stocks_proportion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="stocks proportion test"
+        app:layout_constraintBottom_toTopOf="@+id/my_investments_bonds_proportion"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline9"
+        app:layout_constraintTop_toBottomOf="@+id/my_investments_proportion_label" />
+
+    <TextView
+        android:id="@+id/my_investments_bonds_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/bonds_label"
+        app:layout_constraintBottom_toTopOf="@+id/my_investments_property_label"
+        app:layout_constraintEnd_toStartOf="@+id/guideline8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/my_investments_stocks_label" />
+
+    <TextView
+        android:id="@+id/my_investments_bonds_money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="bonds money test"
+        app:layout_constraintBottom_toTopOf="@+id/my_investments_property_money"
+        app:layout_constraintEnd_toStartOf="@+id/guideline9"
+        app:layout_constraintStart_toStartOf="@+id/guideline8"
+        app:layout_constraintTop_toBottomOf="@+id/my_investments_stocks_money" />
+
+    <!-- Property Info -->
+
+    <TextView
+        android:id="@+id/my_investments_bonds_proportion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="bonds proportion test"
+        app:layout_constraintBottom_toTopOf="@+id/my_investments_property_proportion"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline9"
+        app:layout_constraintTop_toBottomOf="@+id/my_investments_stocks_proportion" />
+
+    <TextView
+        android:id="@+id/my_investments_property_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/property_label"
+        app:layout_constraintBottom_toTopOf="@+id/my_investments_cash_label"
+        app:layout_constraintEnd_toStartOf="@+id/guideline8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/my_investments_bonds_label" />
+
+    <TextView
+        android:id="@+id/my_investments_property_money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="property money test"
+        app:layout_constraintBottom_toTopOf="@+id/my_investments_cash_money"
+        app:layout_constraintEnd_toStartOf="@+id/guideline9"
+        app:layout_constraintStart_toStartOf="@+id/guideline8"
+        app:layout_constraintTop_toBottomOf="@+id/my_investments_bonds_money" />
+
+    <!-- Cash Info -->
+
+    <TextView
+        android:id="@+id/my_investments_property_proportion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="property proportion test"
+        app:layout_constraintBottom_toTopOf="@+id/my_investments_cash_proportion"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline9"
+        app:layout_constraintTop_toBottomOf="@+id/my_investments_bonds_proportion" />
+
+    <TextView
+        android:id="@+id/my_investments_cash_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cash_label"
+        app:layout_constraintBottom_toTopOf="@+id/guideline7"
+        app:layout_constraintEnd_toStartOf="@+id/guideline8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/my_investments_property_label" />
+
+    <TextView
+        android:id="@+id/my_investments_cash_money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="cash test"
+        app:layout_constraintBottom_toTopOf="@+id/parents_investments_label"
+        app:layout_constraintEnd_toStartOf="@+id/guideline9"
+        app:layout_constraintStart_toStartOf="@+id/guideline8"
+        app:layout_constraintTop_toBottomOf="@+id/my_investments_property_money" />
+
+    <!-- Parents' Investments -->
+
+    <!-- Table Headers -->
+
+    <TextView
+        android:id="@+id/my_investments_cash_proportion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="cash proportion test"
+        app:layout_constraintBottom_toTopOf="@+id/guideline7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline9"
+        app:layout_constraintTop_toBottomOf="@+id/my_investments_property_proportion" />
+
+    <TextView
+        android:id="@+id/parents_investments_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/parents_investments_label"
+        app:layout_constraintTop_toTopOf="@+id/guideline7"
+        tools:layout_editor_absoluteX="16dp" />
+
+    <TextView
+        android:id="@+id/parents_investments_asset_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/asset_label"
+        app:layout_constraintBottom_toTopOf="@+id/parents_investments_stocks_label"
+        app:layout_constraintEnd_toStartOf="@+id/guideline8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/parents_investments_label" />
+
+    <TextView
+        android:id="@+id/parents_investments_money_amt_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/money_amt_label"
+        app:layout_constraintBottom_toTopOf="@+id/parents_investments_stocks_money"
+        app:layout_constraintEnd_toStartOf="@+id/guideline9"
+        app:layout_constraintStart_toStartOf="@+id/guideline8"
+        app:layout_constraintTop_toBottomOf="@+id/parents_investments_label" />
+
+    <!-- Stocks Info -->
+
+    <TextView
+        android:id="@+id/parents_investments_proportion_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/proportion_label"
+        app:layout_constraintBottom_toTopOf="@+id/parents_investments_stocks_proportion"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline9"
+        app:layout_constraintTop_toBottomOf="@+id/parents_investments_label" />
+
+    <TextView
+        android:id="@+id/parents_investments_stocks_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/stocks_label"
+        app:layout_constraintBottom_toTopOf="@+id/parents_investments_bonds_label"
+        app:layout_constraintEnd_toStartOf="@+id/guideline8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/parents_investments_asset_label" />
+
+    <TextView
+        android:id="@+id/parents_investments_stocks_money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="stocks money test"
+        app:layout_constraintBottom_toTopOf="@+id/parents_investments_bonds_money"
+        app:layout_constraintEnd_toStartOf="@+id/guideline9"
+        app:layout_constraintStart_toStartOf="@+id/guideline8"
+        app:layout_constraintTop_toBottomOf="@+id/parents_investments_money_amt_label" />
+
+    <!-- Bonds Info -->
+
+    <TextView
+        android:id="@+id/parents_investments_stocks_proportion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="stocks proportion test"
+        app:layout_constraintBottom_toTopOf="@+id/parents_investments_bonds_proportion"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline9"
+        app:layout_constraintTop_toBottomOf="@+id/parents_investments_proportion_label" />
+
+    <TextView
+        android:id="@+id/parents_investments_bonds_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/bonds_label"
+        app:layout_constraintBottom_toTopOf="@+id/parents_investments_property_label"
+        app:layout_constraintEnd_toStartOf="@+id/guideline8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/parents_investments_stocks_label" />
+
+    <TextView
+        android:id="@+id/parents_investments_bonds_money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="bonds money test"
+        app:layout_constraintBottom_toTopOf="@+id/parents_investments_property_money"
+        app:layout_constraintEnd_toStartOf="@+id/guideline9"
+        app:layout_constraintStart_toStartOf="@+id/guideline8"
+        app:layout_constraintTop_toBottomOf="@+id/parents_investments_stocks_money" />
+
+    <!-- Property Info -->
+
+    <TextView
+        android:id="@+id/parents_investments_bonds_proportion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="bonds proportion test"
+        app:layout_constraintBottom_toTopOf="@+id/parents_investments_property_proportion"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline9"
+        app:layout_constraintTop_toBottomOf="@+id/parents_investments_stocks_proportion" />
+
+    <TextView
+        android:id="@+id/parents_investments_property_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/property_label"
+        app:layout_constraintBottom_toTopOf="@+id/parents_investments_cash_label"
+        app:layout_constraintEnd_toStartOf="@+id/guideline8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/parents_investments_bonds_label" />
+
+    <TextView
+        android:id="@+id/parents_investments_property_money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="property money test"
+        app:layout_constraintBottom_toTopOf="@+id/parents_investments_cash_money"
+        app:layout_constraintEnd_toStartOf="@+id/guideline9"
+        app:layout_constraintStart_toStartOf="@+id/guideline8"
+        app:layout_constraintTop_toBottomOf="@+id/parents_investments_bonds_money" />
+
+    <!-- Cash Info -->
+
+    <TextView
+        android:id="@+id/parents_investments_property_proportion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="property prop test"
+        app:layout_constraintBottom_toTopOf="@+id/parents_investments_cash_proportion"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline9"
+        app:layout_constraintTop_toBottomOf="@+id/parents_investments_bonds_proportion" />
+
+    <TextView
+        android:id="@+id/parents_investments_cash_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cash_label"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/parents_investments_property_label" />
+
+    <TextView
+        android:id="@+id/parents_investments_cash_money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="cash test"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline9"
+        app:layout_constraintStart_toStartOf="@+id/guideline8"
+        app:layout_constraintTop_toBottomOf="@+id/parents_investments_property_money" />
+
+    <TextView
+        android:id="@+id/parents_investments_cash_proportion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="cash prop test"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline9"
+        app:layout_constraintTop_toBottomOf="@+id/parents_investments_property_proportion" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".5" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".33333" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".66667" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
