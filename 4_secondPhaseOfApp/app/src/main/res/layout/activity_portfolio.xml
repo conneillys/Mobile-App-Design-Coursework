@@ -12,7 +12,16 @@
         android:id="@+id/my_investments_label"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:padding="4dp"
+        android:letterSpacing=".25"
         android:text="@string/my_investments_label"
+        android:textAllCaps="true"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <!-- Table Headers -->
@@ -22,6 +31,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/asset_label"
+        android:textAllCaps="true"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/my_investments_stocks_label"
         app:layout_constraintEnd_toStartOf="@+id/guideline8"
         app:layout_constraintStart_toStartOf="parent"
@@ -32,6 +43,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/money_amt_label"
+        android:textAllCaps="true"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/my_investments_stocks_money"
         app:layout_constraintEnd_toStartOf="@+id/guideline9"
         app:layout_constraintStart_toStartOf="@+id/guideline8"
@@ -44,15 +57,27 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/proportion_label"
+        android:textAllCaps="true"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/guideline9"
         app:layout_constraintTop_toTopOf="@+id/my_investments_money_amt_label" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginHorizontal="32dp"
+        android:background="@color/separator"
+        app:layout_constraintBottom_toTopOf="@+id/my_investments_stocks_label"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/my_investments_asset_label" />
 
     <TextView
         android:id="@+id/my_investments_stocks_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/stocks_label"
+        android:textAllCaps="true"
         app:layout_constraintBottom_toTopOf="@+id/my_investments_bonds_label"
         app:layout_constraintEnd_toStartOf="@+id/guideline8"
         app:layout_constraintStart_toStartOf="parent"
@@ -85,6 +110,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/bonds_label"
+        android:textAllCaps="true"
         app:layout_constraintBottom_toTopOf="@+id/my_investments_property_label"
         app:layout_constraintEnd_toStartOf="@+id/guideline8"
         app:layout_constraintStart_toStartOf="parent"
@@ -117,6 +143,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/property_label"
+        android:textAllCaps="true"
         app:layout_constraintBottom_toTopOf="@+id/my_investments_cash_label"
         app:layout_constraintEnd_toStartOf="@+id/guideline8"
         app:layout_constraintStart_toStartOf="parent"
@@ -149,6 +176,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/cash_label"
+        android:textAllCaps="true"
         app:layout_constraintBottom_toTopOf="@+id/guideline7"
         app:layout_constraintEnd_toStartOf="@+id/guideline8"
         app:layout_constraintStart_toStartOf="parent"
@@ -166,6 +194,22 @@
 
     <!-- Parents' Investments -->
 
+    <TextView
+        android:id="@+id/parents_investments_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:padding="4dp"
+        android:letterSpacing=".25"
+        android:text="@string/parents_investments_label"
+        android:textAllCaps="true"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline7" />
+
     <!-- Table Headers -->
 
     <TextView
@@ -179,18 +223,12 @@
         app:layout_constraintTop_toBottomOf="@+id/my_investments_property_proportion" />
 
     <TextView
-        android:id="@+id/parents_investments_label"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/parents_investments_label"
-        app:layout_constraintTop_toTopOf="@+id/guideline7"
-        tools:layout_editor_absoluteX="16dp" />
-
-    <TextView
         android:id="@+id/parents_investments_asset_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/asset_label"
+        android:textAllCaps="true"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/parents_investments_stocks_label"
         app:layout_constraintEnd_toStartOf="@+id/guideline8"
         app:layout_constraintStart_toStartOf="parent"
@@ -201,10 +239,21 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/money_amt_label"
+        android:textAllCaps="true"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/parents_investments_stocks_money"
         app:layout_constraintEnd_toStartOf="@+id/guideline9"
         app:layout_constraintStart_toStartOf="@+id/guideline8"
         app:layout_constraintTop_toBottomOf="@+id/parents_investments_label" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginHorizontal="32dp"
+        android:background="@color/separator"
+        app:layout_constraintBottom_toTopOf="@+id/parents_investments_stocks_label"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/parents_investments_asset_label" />
 
     <!-- Stocks Info -->
 
@@ -213,6 +262,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/proportion_label"
+        android:textAllCaps="true"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/parents_investments_stocks_proportion"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/guideline9"
@@ -223,6 +274,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/stocks_label"
+        android:textAllCaps="true"
         app:layout_constraintBottom_toTopOf="@+id/parents_investments_bonds_label"
         app:layout_constraintEnd_toStartOf="@+id/guideline8"
         app:layout_constraintStart_toStartOf="parent"
@@ -255,6 +307,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/bonds_label"
+        android:textAllCaps="true"
         app:layout_constraintBottom_toTopOf="@+id/parents_investments_property_label"
         app:layout_constraintEnd_toStartOf="@+id/guideline8"
         app:layout_constraintStart_toStartOf="parent"
@@ -287,6 +340,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/property_label"
+        android:textAllCaps="true"
         app:layout_constraintBottom_toTopOf="@+id/parents_investments_cash_label"
         app:layout_constraintEnd_toStartOf="@+id/guideline8"
         app:layout_constraintStart_toStartOf="parent"
@@ -319,6 +373,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/cash_label"
+        android:textAllCaps="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/guideline8"
         app:layout_constraintStart_toStartOf="parent"
@@ -351,12 +406,51 @@
         android:orientation="horizontal"
         app:layout_constraintGuide_percent=".5" />
 
+    <View
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@color/separator"
+        app:layout_constraintBottom_toTopOf="@+id/parents_investments_label"
+        app:layout_constraintEnd_toStartOf="@+id/guideline8"
+        app:layout_constraintTop_toBottomOf="@+id/my_investments_label" />
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@color/separator"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline8"
+        app:layout_constraintTop_toBottomOf="@+id/parents_investments_label" />
+
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_percent=".33333" />
+    <View
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@color/separator"
+        app:layout_constraintBottom_toTopOf="@+id/parents_investments_label"
+        app:layout_constraintEnd_toStartOf="@+id/guideline9"
+        app:layout_constraintTop_toBottomOf="@+id/my_investments_label" />
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@color/separator"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline9"
+        app:layout_constraintTop_toBottomOf="@+id/parents_investments_label" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline9"

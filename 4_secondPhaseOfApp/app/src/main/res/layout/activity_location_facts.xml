@@ -28,8 +28,15 @@
 
     <TextView
         android:id="@+id/facts_birthplace_label"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="@color/colorPrimary"
+        android:textColor="#ffffff"
+        android:padding="4dp"
+        android:textAllCaps="true"
+        android:letterSpacing=".25"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:text="@string/birth_place"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -48,18 +55,24 @@
 
         <TextView
             android:id="@+id/facts_birthplace_summary"
+            android:textSize="16sp"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="Birthplace Placeholder"/>
+            android:layout_height="wrap_content"
+            android:text="Birthplace Placeholder" />
     </ScrollView>
 
     <TextView
         android:id="@+id/facts_birthplace_more"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/click_more"
-        android:onClick="onClick"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
         android:clickable="true"
+        android:onClick="onClick"
+        android:text="@string/click_more"
+        android:textAllCaps="true"
+        android:textColor="@color/colorPrimaryDark"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/guideline4"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -85,8 +98,15 @@
 
     <TextView
         android:id="@+id/facts_live_now_label"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="@color/colorPrimary"
+        android:textColor="#ffffff"
+        android:padding="4dp"
+        android:textAllCaps="true"
+        android:letterSpacing=".25"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:text="@string/my_town"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -106,17 +126,23 @@
         <TextView
             android:id="@+id/facts_live_now_summary"
             android:text="Live Now Placeholder"
+            android:textSize="16sp"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+            android:layout_height="wrap_content"/>
     </ScrollView>
 
     <TextView
         android:id="@+id/facts_live_now_more"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/click_more"
-        android:onClick="onClick"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
         android:clickable="true"
+        android:onClick="onClick"
+        android:text="@string/click_more"
+        android:textAllCaps="true"
+        android:textColor="@color/colorPrimaryDark"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/guideline5"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -142,8 +168,15 @@
 
     <TextView
         android:id="@+id/facts_want_to_live_label"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="@color/colorPrimary"
+        android:textColor="#ffffff"
+        android:padding="4dp"
+        android:textAllCaps="true"
+        android:letterSpacing=".25"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:text="@string/want_to_live"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -163,8 +196,9 @@
         <TextView
             android:id="@+id/facts_want_to_live_summary"
             android:text="Want to Live Placeholder"
+            android:textSize="16sp"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+            android:layout_height="wrap_content"/>
 
     </ScrollView>
 
@@ -172,9 +206,14 @@
         android:id="@+id/facts_want_to_live_more"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/click_more"
-        android:onClick="onClick"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
         android:clickable="true"
+        android:onClick="onClick"
+        android:text="@string/click_more"
+        android:textAllCaps="true"
+        android:textColor="@color/colorPrimaryDark"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/guideline6"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -202,8 +241,15 @@
 
     <TextView
         android:id="@+id/facts_bf_label"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="@color/colorPrimary"
+        android:textColor="#ffffff"
+        android:padding="4dp"
+        android:textAllCaps="true"
+        android:letterSpacing=".25"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:text="@string/boyfriend_town"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -226,8 +272,9 @@
         <TextView
             android:id="@+id/facts_bf_summary"
             android:text="S/O Placeholder"
+            android:textSize="16sp"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+            android:layout_height="wrap_content"/>
 
     </ScrollView>
 
@@ -235,9 +282,14 @@
         android:id="@+id/facts_bf_more"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/click_more"
-        android:onClick="onClick"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
         android:clickable="true"
+        android:onClick="onClick"
+        android:text="@string/click_more"
+        android:textAllCaps="true"
+        android:textColor="@color/colorPrimaryDark"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 

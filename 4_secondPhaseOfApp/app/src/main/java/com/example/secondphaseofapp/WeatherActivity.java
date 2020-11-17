@@ -180,8 +180,13 @@ public class WeatherActivity extends AppCompatActivity {
             if (data != null) {
                 int i = Integer.valueOf(data[3]);
                 int code = Integer.valueOf(data[0]);
-                String high = data[1];
-                String low = data[2];
+                String highStr = data[1];
+                String lowStr = data[2];
+                double highD = Double.valueOf(highStr);
+                double lowD = Double.valueOf(lowStr);
+                int high = (int) highD;
+                int low = (int) lowD;
+
                 switch (i) {
                     case 0:  // Current location
                         currentWeatherIcon.setImageResource(WeatherUtils.getArtResourceForWeatherCondition(code));
