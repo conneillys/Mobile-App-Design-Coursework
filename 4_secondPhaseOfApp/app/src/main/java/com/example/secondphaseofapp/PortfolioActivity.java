@@ -96,7 +96,13 @@ public class PortfolioActivity extends AppCompatActivity {
                 startActivity(intent);
             }
             else {
-                Log.d("MainActivity", "Resume failed to open.");
+                Log.d("PortfolioActivity", "Resume failed to open.");
+            }
+        }
+        else if (id == R.id.bonus_facts_menu_item) {
+            Intent intent = new Intent(this, BonusFactsActivity.class);
+            if (intent.resolveActivity(getPackageManager()) != null) {
+                startActivity(intent);
             }
         }
         return super.onOptionsItemSelected(item);
