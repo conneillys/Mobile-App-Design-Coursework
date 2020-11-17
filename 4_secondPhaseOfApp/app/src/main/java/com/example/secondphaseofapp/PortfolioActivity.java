@@ -4,10 +4,13 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.TextView;
+
+import com.example.secondphaseofapp.utils.ResumeUtils;
 
 public class PortfolioActivity extends AppCompatActivity {
 
@@ -84,6 +87,16 @@ public class PortfolioActivity extends AppCompatActivity {
             Intent intent = new Intent(this, LocationFactsActivity.class);
             if (intent.resolveActivity(getPackageManager()) != null) {
                 startActivity(intent);
+            }
+        }
+        else if (id == R.id.resume_menu_item) {
+            Intent intent = new Intent(Intent.ACTION_VIEW, ResumeUtils.getResumeUri(this));
+            intent.setFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+            if (intent.resolveActivity(getPackageManager()) != null) {
+                startActivity(intent);
+            }
+            else {
+                Log.d("MainActivity", "Resume failed to open.");
             }
         }
         return super.onOptionsItemSelected(item);

@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -14,6 +15,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.secondphaseofapp.utils.LocationFactsUtils;
+import com.example.secondphaseofapp.utils.ResumeUtils;
 
 public class LocationFactsActivity extends AppCompatActivity {
     private final int BIRTH_PLACE_ID = 332123;
@@ -102,6 +104,16 @@ public class LocationFactsActivity extends AppCompatActivity {
             Intent intent = new Intent(this, PortfolioActivity.class);
             if (intent.resolveActivity(getPackageManager()) != null) {
                 startActivity(intent);
+            }
+        }
+        else if (id == R.id.resume_menu_item) {
+            Intent intent = new Intent(Intent.ACTION_VIEW, ResumeUtils.getResumeUri(this));
+            intent.setFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+            if (intent.resolveActivity(getPackageManager()) != null) {
+                startActivity(intent);
+            }
+            else {
+                Log.d("MainActivity", "Resume failed to open.");
             }
         }
         return super.onOptionsItemSelected(item);
