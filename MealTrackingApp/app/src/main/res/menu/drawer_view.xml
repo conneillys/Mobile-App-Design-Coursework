@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:title="@string/home_name"
+            android:checked="true"/>
+        <item
+            android:id="@+id/nav_meals"
+            android:title="@string/meals_name" />
+        <item
+            android:id="@+id/nav_recipes"
+            android:title="@string/recipes_name" />
+        <item
+            android:id="@+id/nav_search"
+            android:title="@string/search_name" />
+        <item
+            android:id="@+id/nav_calories"
+            android:title="@string/calories_name"/>
+        <item
+            android:id="@+id/nav_nutrition"
+            android:title="@string/nutrition_name" />
+        <item
+            android:id="@+id/nav_weight"
+            android:title="@string/weight_name" />
+    </group>
+
+</menu>

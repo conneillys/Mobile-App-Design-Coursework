@@ -1,213 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<!-- Source: github.com/codepath/android_guides/wiki/Fragment-Navigation-Drawer -->
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".MainActivity">
+    android:layout_height="match_parent">
 
-    <!-- Calories -->
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <TextView
-            android:id="@+id/calories_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Calories"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:layout_margin="16dp"/>
-
-        <TextView
-            android:id="@+id/today_calories"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="0"
-            android:layout_toLeftOf="@id/calorie_slash_separator"
-            android:layout_toStartOf="@id/calorie_slash_separator"
-            android:layout_alignBottom="@id/goal_calories" />
-
-        <TextView
-            android:id="@+id/calorie_slash_separator"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="/"
-            android:layout_toLeftOf="@id/goal_calories"
-            android:layout_toStartOf="@id/goal_calories"
-            android:layout_alignBottom="@id/goal_calories"
-            android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp" />
-
-        <TextView
-            android:id="@+id/goal_calories"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="2000"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginRight="16dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginBottom="16dp" />
-
-    </RelativeLayout>
-
-    <!-- Nutrition Section -->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <TextView
+        <include
+            layout="@layout/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Nutrition"
-            android:gravity="center_horizontal"
-            android:layout_marginTop="16dp"
-            android:layout_marginBottom="16dp"/>
+            android:layout_height="wrap_content" />
 
-        <!-- Carbohydrates -->
-        <RelativeLayout
+        <FrameLayout
+            android:id="@+id/frameContent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <TextView
-                android:id="@+id/carb_label"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Carbohydrates"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_margin="16dp" />
-
-            <TextView
-                android:id="@+id/carb_value"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="0"
-                android:layout_toStartOf="@id/carb_percent_sign"
-                android:layout_toLeftOf="@id/carb_percent_sign"
-                android:layout_alignBaseline="@id/carb_percent_sign" />
-
-            <TextView
-                android:id="@+id/carb_percent_sign"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="%"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true"
-                android:layout_marginTop="16dp"
-                android:layout_marginBottom="16dp"
-                android:layout_marginRight="16dp"
-                android:layout_marginEnd="16dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginStart="8dp" />
-
-        </RelativeLayout>
-
-        <!-- Protein -->
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <TextView
-                android:id="@+id/protein_label"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Protein"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_margin="16dp" />
-
-            <TextView
-                android:id="@+id/protein_value"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="0"
-                android:layout_toStartOf="@id/protein_percent_sign"
-                android:layout_toLeftOf="@id/protein_percent_sign"
-                android:layout_alignBaseline="@id/protein_percent_sign" />
-
-            <TextView
-                android:id="@+id/protein_percent_sign"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="%"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true"
-                android:layout_marginTop="16dp"
-                android:layout_marginBottom="16dp"
-                android:layout_marginRight="16dp"
-                android:layout_marginEnd="16dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginStart="8dp" />
-
-        </RelativeLayout>
-
-        <!-- Fat -->
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <TextView
-                android:id="@+id/fat_label"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Fat"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_margin="16dp" />
-
-            <TextView
-                android:id="@+id/fat_value"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="0"
-                android:layout_toStartOf="@id/fat_percent_sign"
-                android:layout_toLeftOf="@id/fat_percent_sign"
-                android:layout_alignBaseline="@id/fat_percent_sign" />
-
-            <TextView
-                android:id="@+id/fat_percent_sign"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="%"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true"
-                android:layout_marginTop="16dp"
-                android:layout_marginBottom="16dp"
-                android:layout_marginRight="16dp"
-                android:layout_marginEnd="16dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginStart="8dp" />
-
-        </RelativeLayout>
+            android:layout_height="match_parent" />
 
     </LinearLayout>
 
-    <!-- Weight Chart -->
-    <TextView
-        android:id="@+id/weight_chart_title"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="Weight Chart" />
-
-    <com.github.mikephil.charting.charts.LineChart
-        android:id="@+id/weight_chart"
-        android:layout_height="wrap_content"
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navView"
         android:layout_width="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:visibility="invisible"/>
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@android:color/background_light"
+        app:menu="@menu/drawer_view"
+        />
 
-    <TextView
-        android:id="@+id/no_weight_recorded"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-        android:text="You have not entered any weight data yet." />
-
-</LinearLayout>
+</androidx.drawerlayout.widget.DrawerLayout>
