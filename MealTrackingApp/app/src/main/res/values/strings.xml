@@ -8,6 +8,10 @@
     <string name="nutrition_name">Nutrition</string>
     <string name="weight_name">Weight</string>
 
+    <string name="seven_day_chart">7 Days</string>
+    <string name="thirty_day_chart">30 Days</string>
+    <string name="ninety_day_chart">90 Days</string>
+
     <string name="drawer_open">Open navigation drawer</string>
     <string name="drawer_close">Close navigation drawer</string>
     <!-- TODO: Remove or change this placeholder text -->

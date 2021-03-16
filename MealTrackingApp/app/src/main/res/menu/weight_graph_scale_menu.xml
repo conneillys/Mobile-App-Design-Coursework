@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/weight_7_day_view"
+        android:title="@string/seven_day_chart"
+        />
+
+    <item
+        android:id="@+id/weight_30_day_view"
+        android:title="@string/thirty_day_chart"
+        />
+
+    <item
+        android:id="@+id/weight_90_day_view"
+        android:title="@string/ninety_day_chart"
+        />
+
+</menu>
