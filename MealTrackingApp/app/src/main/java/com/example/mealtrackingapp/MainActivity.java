@@ -81,6 +81,12 @@ public class MainActivity extends AppCompatActivity {
             case R.id.nav_home:
                 fragClass = HomeFragment.class;
                 break;
+            case R.id.nav_calories:
+                fragClass = CaloriesFragment.class;
+                break;
+            case R.id.nav_weight:
+                fragClass = WeightFragment.class;
+                break;
             default:
                 fragClass = HomeFragment.class;
         }

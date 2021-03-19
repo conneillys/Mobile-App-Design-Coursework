@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_height="match_parent"
     android:layout_width="match_parent">
 
-    <LinearLayout
+    <RelativeLayout
+        android:id="@+id/weight_chart_block"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
         android:orientation="vertical"
         tools:context=".MainActivity">
-
-        <!-- Calorie Chart -->
+        <!-- Weight Chart -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -28,14 +28,15 @@
                 android:background="@drawable/rounded_outline">
 
                 <TextView
-                    android:id="@+id/calories_chart_title"
+                    android:id="@+id/weight_chart_title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:paddingTop="16dp"
                     android:paddingBottom="16dp"
                     android:layout_centerInParent="true"
-                    android:text="Calories" />
+                    android:text="Weight"
+                    android:textColor="@color/colorImportantText"/>
 
                 <ImageButton
                     android:layout_width="wrap_content"
@@ -49,8 +50,8 @@
 
             </RelativeLayout>
 
-            <com.github.mikephil.charting.charts.BarChart
-                android:id="@+id/calories_chart"
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/weight_chart"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
@@ -59,69 +60,108 @@
                 android:visibility="gone" />
 
             <TextView
-                android:id="@+id/no_calories_recorded"
+                android:id="@+id/no_weight_recorded"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
                 android:paddingTop="16dp"
                 android:paddingBottom="16dp"
-                android:text="You have not entered any meal data yet." />
+                android:text="You have not entered any weight data yet." />
 
         </LinearLayout>
+    </RelativeLayout>
 
-        <!-- Calories Consumed -->
+    <!-- Weight Information -->
+    <LinearLayout
+        android:id="@+id/weight_info_block"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/weight_chart_block">
+        <Space
+            android:layout_width="16dp"
+            android:layout_height="match_parent"/>
+
+        <!-- Current Weight Information -->
         <RelativeLayout
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:layout_marginTop="16dp"
             android:layout_marginBottom="16dp"
             android:background="@drawable/rounded_outline">
-
             <TextView
-                android:id="@+id/calories_label"
+                android:id="@+id/weight_current_label"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentLeft="true"
                 android:layout_margin="16dp"
-                android:text="Calories"
+                android:text="Current Weight"
                 android:textColor="@color/colorImportantText" />
 
             <TextView
-                android:id="@+id/today_calories"
+                android:id="@+id/weight_current_val"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignBottom="@id/goal_calories"
-                android:layout_toStartOf="@id/calorie_slash_separator"
-                android:layout_toLeftOf="@id/calorie_slash_separator"
-                android:text="0"
-                android:textColor="@color/colorImportantText" />
-
-            <TextView
-                android:id="@+id/calorie_slash_separator"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignBottom="@id/goal_calories"
-                android:layout_marginLeft="8dp"
-                android:layout_marginRight="8dp"
-                android:layout_toStartOf="@id/goal_calories"
-                android:layout_toLeftOf="@id/goal_calories"
-                android:text="/" />
-
-            <TextView
-                android:id="@+id/goal_calories"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/weight_current_label"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentRight="true"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="16dp"
                 android:layout_marginRight="16dp"
-                android:layout_marginBottom="16dp"
-                android:text="2000" />
-
+                android:text="175"
+                android:textColor="@color/colorImportantText" />
         </RelativeLayout>
 
+        <Space
+            android:layout_width="8dp"
+            android:layout_height="match_parent"/>
+
+        <!-- Goal Weight Information -->
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/rounded_outline">
+            <TextView
+                android:id="@+id/weight_goal_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_margin="16dp"
+                android:text="Goal Weight"
+                android:textColor="@color/colorImportantText"/>
+
+            <TextView
+                android:id="@+id/weight_goal_val"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/weight_goal_label"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="16dp"
+                android:text="150"
+                android:textColor="@color/colorImportantText" />
+        </RelativeLayout>
+
+        <Space
+            android:layout_width="16dp"
+            android:layout_height="match_parent"/>
     </LinearLayout>
 
-</ScrollView>
+    <TextView
+        android:id="@+id/edit_weight_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Edit Weight Data"
+        android:textColor="@color/colorButtonText"
+        android:background="@color/colorPrimaryDark"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="8dp"
+        android:layout_marginBottom="16dp"
+        android:layout_below="@id/weight_info_block"
+        android:layout_centerHorizontal="true"/>
+
+</RelativeLayout>
