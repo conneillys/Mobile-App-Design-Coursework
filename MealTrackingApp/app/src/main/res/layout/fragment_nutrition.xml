@@ -1,20 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_height="match_parent"
-    android:layout_width="match_parent">
+    android:layout_width="match_parent"
+    android:fillViewport="true">
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
         android:orientation="vertical"
         tools:context=".MainActivity">
 
-        <!-- Calorie Chart -->
+        <!-- Nutrition Chart -->
         <LinearLayout
+            android:id="@+id/nutrition_chart_block"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
@@ -28,14 +31,14 @@
                 android:background="@drawable/rounded_outline">
 
                 <TextView
-                    android:id="@+id/calories_chart_title"
+                    android:id="@+id/nutrition_chart_title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:paddingTop="16dp"
                     android:paddingBottom="16dp"
                     android:layout_centerInParent="true"
-                    android:text="Calories" />
+                    android:text="Nutrition" />
 
                 <ImageButton
                     android:layout_width="wrap_content"
@@ -49,8 +52,8 @@
 
             </RelativeLayout>
 
-            <com.github.mikephil.charting.charts.BarChart
-                android:id="@+id/calories_chart"
+            <com.github.mikephil.charting.charts.PieChart
+                android:id="@+id/nutrition_chart"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
@@ -59,7 +62,7 @@
                 android:visibility="gone" />
 
             <TextView
-                android:id="@+id/no_calories_recorded"
+                android:id="@+id/no_nutrition_recorded"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
@@ -69,59 +72,29 @@
 
         </LinearLayout>
 
-        <!-- Calories Consumed -->
-        <RelativeLayout
+        <Space
+            android:id="@+id/nutrition_page_space"
+            android:layout_width="match_parent"
+            android:layout_height="8dp"
+            android:layout_below="@id/nutrition_chart_block"/>
+
+        <!-- Nutrition Information Details -->
+        <TextView
+            android:id="@+id/nutrition_details_header"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:layout_marginBottom="16dp"
-            android:background="@drawable/rounded_outline">
+            android:background="@drawable/rounded_outline"
+            android:gravity="center"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp"
+            android:layout_below="@id/nutrition_page_space"
+            android:text="Details"/>
 
-            <TextView
-                android:id="@+id/calories_label"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentLeft="true"
-                android:layout_margin="16dp"
-                android:text="Calories"
-                android:textColor="@color/colorImportantText" />
-
-            <TextView
-                android:id="@+id/today_calories"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignBottom="@id/goal_calories"
-                android:layout_toStartOf="@id/calorie_slash_separator"
-                android:layout_toLeftOf="@id/calorie_slash_separator"
-                android:text="0"
-                android:textColor="@color/colorImportantText" />
-
-            <TextView
-                android:id="@+id/calorie_slash_separator"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignBottom="@id/goal_calories"
-                android:layout_marginLeft="4dp"
-                android:layout_marginRight="4dp"
-                android:layout_toStartOf="@id/goal_calories"
-                android:layout_toLeftOf="@id/goal_calories"
-                android:text="/" />
-
-            <TextView
-                android:id="@+id/goal_calories"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentRight="true"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="16dp"
-                android:layout_marginRight="16dp"
-                android:layout_marginBottom="16dp"
-                android:text="2000" />
-
-        </RelativeLayout>
-
-    </LinearLayout>
-
+        <ExpandableListView
+            android:id="@+id/nutrition_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/nutrition_details_header"
+            android:groupIndicator="@null"/>
+    </RelativeLayout>
 </ScrollView>
