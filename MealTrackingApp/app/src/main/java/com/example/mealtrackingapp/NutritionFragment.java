@@ -82,9 +82,6 @@ public class NutritionFragment extends Fragment {
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         nutritionListView = (ExpandableListView) getActivity().findViewById(R.id.nutrition_list);
-        if (nutritionListView == null) {
-            Log.d("NUTRITION", format("nutrition_list id: %d", R.id.nutrition_list));
-        }
         nutritionListItems = NutritionListDataPump.getData();
         nutritionHeaders = new ArrayList<String>(nutritionListItems.keySet());
         nutritionListAdapter = new NutritionListAdapter(

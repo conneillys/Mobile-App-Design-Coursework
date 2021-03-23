@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:fillViewport="true">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:orientation="vertical"
+        tools:context=".MainActivity">
+        <RelativeLayout
+            android:id="@+id/breakfast_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/rounded_outline"
+            android:layout_marginTop="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:layout_centerInParent="true"
+                android:text="Breakfast"
+                android:textColor="@color/colorImportantText"/>
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/clock"
+                android:background="@android:color/transparent"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:paddingRight="8dp"
+                android:layout_alignParentRight="true"/>
+        </RelativeLayout>
+        <ListView
+            android:id="@+id/breakfast_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/breakfast_header" />
+        <RelativeLayout
+            android:id="@+id/breakfast_add_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/breakfast_list">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_add_24"
+                android:color="@color/colorPrimaryDark"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="Add..."
+                android:textColor="@color/colorPrimaryDark"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/lunch_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/rounded_outline"
+            android:layout_marginTop="16dp"
+            android:layout_below="@id/breakfast_add_button">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:layout_centerInParent="true"
+                android:text="Lunch"
+                android:textColor="@color/colorImportantText" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/clock"
+                android:background="@android:color/transparent"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:paddingRight="8dp"
+                android:layout_alignParentRight="true"/>
+        </RelativeLayout>
+        <ListView
+            android:id="@+id/lunch_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lunch_header" />
+        <RelativeLayout
+            android:id="@+id/lunch_add_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lunch_list">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_add_24"
+                android:color="@color/colorPrimaryDark"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="Add..."
+                android:textColor="@color/colorPrimaryDark"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/dinner_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/rounded_outline"
+            android:layout_marginTop="16dp"
+            android:layout_below="@id/lunch_add_button">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:layout_centerInParent="true"
+                android:text="Dinner"
+                android:textColor="@color/colorImportantText" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/clock"
+                android:background="@android:color/transparent"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:paddingRight="8dp"
+                android:layout_alignParentRight="true"/>
+
+        </RelativeLayout>
+        <ListView
+            android:id="@+id/dinner_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/dinner_header" />
+        <RelativeLayout
+            android:id="@+id/dinner_add_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/dinner_list">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_add_24"
+                android:color="@color/colorPrimaryDark"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="Add..."
+                android:textColor="@color/colorPrimaryDark"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/snacks_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/rounded_outline"
+            android:layout_marginTop="16dp"
+            android:layout_below="@id/dinner_add_button">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:layout_centerInParent="true"
+                android:text="Snacks"
+                android:textColor="@color/colorImportantText" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/clock"
+                android:background="@android:color/transparent"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:paddingRight="8dp"
+                android:layout_alignParentRight="true"/>
+
+        </RelativeLayout>
+        <ListView
+            android:id="@+id/snacks_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/snacks_header" />
+        <RelativeLayout
+            android:id="@+id/snacks_add_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/snacks_list">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_add_24"
+                android:color="@color/colorPrimaryDark"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="Add..."
+                android:textColor="@color/colorPrimaryDark"/>
+        </RelativeLayout>
+
+    </RelativeLayout>
+</ScrollView>
