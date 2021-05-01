@@ -1,4 +1,7 @@
 package com.example.mealtrackingapp.database;
 
-public class WeightDao {
+import androidx.room.Dao;
+
+@Dao
+public abstract class WeightDao {
 }
