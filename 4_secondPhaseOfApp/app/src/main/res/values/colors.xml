@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <color name="colorPrimary">#6d5ee0</color>
-    <color name="colorPrimaryDark">#42388f</color>
-    <color name="colorAccent">#89fab5</color>
-    <color name="separator">#999999</color>
-    <color name="highTemp">#ff9152</color>
-    <color name="lowTemp">#60acfc</color>
-</resources>
