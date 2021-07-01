@@ -1,1 +1,1 @@
-I am submitting hand-drawn drafts of what the user interface will look like and notes on general functionality of the app and the pages that will implement that functionality.
+This directory was a submission of concept drawings and notes on the functionality of the app itself. The final project was to design our own app from scratch, and this was what I came up with. I designed it with the expectation that I would be taking the second mobile application design class as well and would continue it there, but did not, so the final app does not have all of this implemented.
