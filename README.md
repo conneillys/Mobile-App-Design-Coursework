@@ -1,5 +1,3 @@
-# COMP 4630 - Mobile App Development I - Fall 2020
+# Coursework for Mobile App Development Class
 
-**Name:** Shannon Conneilly
-
-**Email:** shannon_conneilly@student.uml.edu
+This repository contains relevant coursework from a class I took in Android app development using Java. It was mostly self directed; the bulk of technical learning was done via linked resources and online classes, and we were assigned one app to create and otherwise were left to design and create our own app as the course project. I chose to make a meal tracking app, as detailed in the docs in the project's folder.
